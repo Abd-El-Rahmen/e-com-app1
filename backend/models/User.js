@@ -17,11 +17,10 @@ const UsreSchema = new mongoose.Schema({
   },
   role: {
     type: String,
-    default: 'user'
-}
+    default: "user",
+  },
 });
 
-
-const User = mongoose.model('User',UsreSchema)
+const User = mongoose.model("User", UsreSchema);
 
 export default User;

@@ -2,7 +2,7 @@ import Product from "../../models/Product.js";
 import dotenv from "dotenv";
 
 dotenv.config();
-const PORT = process.env.PORT;
+const URL_ = process.env.URL_;
 
 // upload product image
 const handleImageUpload = (req, res) => {
@@ -14,7 +14,7 @@ const handleImageUpload = (req, res) => {
       });
     }
 
-    const imageUrl = `http://localhost:${PORT}/api/uploads/images/${req.file.filename}`;
+    const imageUrl = `:${URL_}/api/uploads/images/${req.file.filename}`;
 
     res.json({
       success: true,

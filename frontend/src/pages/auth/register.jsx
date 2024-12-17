@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { registerUser } from "../../store/auth-slice";
 import { Link, useNavigate } from "react-router-dom";
-import { useToast } from "../../hooks/use-toast";
 import { setToastAction } from "../../store/common/featuresSlice";
 
 const AuthRegister = () => {
@@ -13,7 +12,6 @@ const AuthRegister = () => {
   });
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { toast } = useToast();
   const [error, setError] = useState("");
   const handleChange = (e) => {
     const { name, value } = e.target;
